@@ -1,0 +1,461 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Better Sleep, Calmer Days</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="dot"></span>
+      <span class="brand-text">Sleep Steady</span>
+    </div>
+    <button class="toggle-button" id="modeToggle" aria-pressed="false">
+      <span class="toggle-label">Day / Night</span>
+      <span class="toggle-pill"><span class="toggle-thumb"></span></span>
+    </button>
+    <div class="top-audio-controls" aria-label="Audio toggles">
+      <button class="toggle-button small" id="snoreBtn" aria-pressed="true">
+        <span class="toggle-label">Snore on</span>
+        <span class="toggle-pill"><span class="toggle-thumb"></span></span>
+      </button>
+      <button class="toggle-button small" id="asmrBtn" aria-pressed="true">
+        <span class="toggle-label">ASMR on</span>
+        <span class="toggle-pill"><span class="toggle-thumb"></span></span>
+      </button>
+    </div>
+  </header>
+  <div class="scroll-progress"><span id="progressBar"></span></div>
+  <div class="click-hint" id="clickHint">Click once to start sound & animations</div>
+
+  <section class="hero" id="hero">
+    <div class="sky grad"></div>
+    <div class="stars" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="matrix" aria-hidden="true">1010 0011 1101 0110 0101 1100 1011 0010 0110 1111 0100 1101 0011 1001 0110 0100 1110 1011 0001 0111 1000 0110 1111 0100 1001 1010 0111 0001 1011 0100 1100 1111</div>
+    <div class="orb" id="orb" aria-hidden="true"></div>
+    <div class="hills" data-speed="0.05">
+      <span class="hill one"></span>
+      <span class="hill two"></span>
+      <span class="hill three"></span>
+    </div>
+    <div class="hero-content">
+      <p class="eyebrow">Student sleep</p>
+      <h1>Better sleep can be part of your daily life</h1>
+      <p class="lede">Keep roughly the same sleep times, get morning light, cut bright screens at night, and make your room calmer. Tiny steps add up fast.</p>
+      <div class="hero-actions">
+        <a href="#why" class="ghost-button">Why it matters</a>
+        <a href="#graph" class="text-link">See the data</a>
+      </div>
+      <div class="thesis-tag">Simple daily choices make good sleep doable.</div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true">
+      <span class="scroll-arrow"></span>
+      <span class="scroll-text">Scroll</span>
+    </div>
+  </section>
+  <div class="mountain-divider" aria-hidden="true" data-speed="0.08">
+    <svg viewBox="0 0 1200 160" preserveAspectRatio="none">
+      <path d="M0,140 L180,80 L320,140 L520,60 L720,150 L940,70 L1100,130 L1200,90 L1200,160 L0,160 Z" />
+    </svg>
+  </div>
+
+  <main>
+    <section class="section why" id="why">
+      <div class="section-head">
+        <p class="eyebrow">Why sleep matters</p>
+        <h2>Sleep powers focus, mood, and health.</h2>
+        <p class="section-lede">Students who keep simple light and sleep habits think clearer, get sick less, and feel calmer. Here’s the science plus quick moves you can try tonight.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <h3>Light cues</h3>
+          <p>Morning light anchors circadian rhythm; dim light at night lets melatonin rise.</p>
+        </div>
+        <div class="why-card">
+          <h3>Routine</h3>
+          <p>Consistent bed/wake times train your body to expect rest, lowering arousal.</p>
+        </div>
+        <div class="why-card">
+          <h3>Environment</h3>
+          <p>Cool, dark, quiet spaces reduce night awakenings and support deep sleep.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section habits" id="habits">
+      <div class="section-head">
+        <p class="eyebrow">Habit stack</p>
+        <h2>Four easy moves to steady your sleep.</h2>
+        <p class="section-lede">Quick actions that fit student life. Short text, clear icons.</p>
+      </div>
+      <div class="card-grid">
+        <article class="card reveal">
+          <div class="icon-frame"><img src="images/icon/MorningLight.png" alt="Pixel sun icon" class="icon"></div>
+          <h3>Morning light</h3>
+          <p>Step outside within 30 minutes of waking. Morning light sets your body clock and makes sleep easier later.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon-frame"><img src="images/icon/BlueLight.png" alt="Pixel phone with blue light icon" class="icon"></div>
+          <h3>Screen curfew</h3>
+          <p>Dim screens an hour before bed. Blue light keeps your brain in “daytime.” Warm light tells it to slow down.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon-frame"><img src="images/icon/Screen-Free.png" alt="Pixel unplug icon" class="icon"></div>
+          <h3>Calm the feed</h3>
+          <p>Swap late scrolling for a screen-free cue: stretch, read, or jot notes to chill out.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon-frame"><img src="images/icon/SleepEnvironment.png" alt="Pixel bedroom icon" class="icon"></div>
+          <h3>Cool, dark, quiet</h3>
+          <p>Cool the room, dim lights, silence alerts. A calm space helps you fall asleep and stay asleep.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section photo" id="morning-photo">
+      <div class="photo-overlay" data-speed="0.06"></div>
+      <div class="photo-content" data-speed="0.04">
+        <p class="eyebrow">Morning reset</p>
+        <h2>Light tells your brain it is daytime.</h2>
+        <p class="section-lede">This real morning photo is your reminder: step into soft light to set your clock.</p>
+      </div>
+    </section>
+
+    <section class="section graph" id="graph">
+      <div class="section-head">
+        <p class="eyebrow">Sleep curve</p>
+        <h2>How light and habits shape your night.</h2>
+        <p class="section-lede">Time on x-axis; lines for light, melatonin, and alertness. Good habits drop alertness while melatonin climbs.</p>
+      </div>
+      <div class="chart-wrap reveal">
+        <canvas id="sleepChart" aria-label="Sleep chart"></canvas>
+        <p class="chart-caption">Light drops before bed; melatonin rises; arousal declines. Simple habits shape the curves.</p>
+      </div>
+    </section>
+
+    <section class="section metrics" id="metrics">
+      <div class="section-head">
+        <p class="eyebrow">Progress & visuals</p>
+        <h2>See your habits in bars, not just words.</h2>
+        <p class="section-lede">Progress bars and columns show how close you are to healthy targets.</p>
+      </div>
+      <div class="metrics-grid">
+        <div class="progress-stack">
+          <div class="progress-row">
+            <div class="progress-label">Sleep duration (target 8-10h)</div>
+            <div class="progress-bar"><span data-fill="75"></span></div>
+            <span class="progress-meta">7.5h</span>
+          </div>
+          <div class="progress-row">
+            <div class="progress-label">Screen curfew before bed (≥0.75h)</div>
+            <div class="progress-bar"><span data-fill="60"></span></div>
+            <span class="progress-meta">0.6h</span>
+          </div>
+          <div class="progress-row">
+            <div class="progress-label">Schedule consistency (0-1h variance)</div>
+            <div class="progress-bar"><span data-fill="80"></span></div>
+            <span class="progress-meta">0.8 score</span>
+          </div>
+        </div>
+        <div class="bar-card">
+          <canvas id="metricsChart" aria-label="Sleep metric bars"></canvas>
+          <p class="chart-caption">Columns compare sleep, screen time, and wind-down buffer against recommended ranges.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section calculator" id="calculator">
+      <div class="section-head">
+        <p class="eyebrow">Sleep calculator</p>
+        <h2>Get a quick score and friendly advice.</h2>
+        <p class="section-lede">Enter your sleep time, wake time, and nightly screen hours. We’ll score it, spot screen overlap, and give matching tips.</p>
+      </div>
+      <div class="calc-grid">
+        <form class="calc-form" id="sleepForm" novalidate>
+          <label>
+            Bedtime (when you fall asleep)
+            <input type="time" id="bedtime" required>
+          </label>
+          <label>
+            Wake time
+            <input type="time" id="waketime" required>
+          </label>
+          <label>
+            Nightly screen time (hours)
+            <input type="number" id="screenHours" min="0" max="8" step="0.25" placeholder="e.g., 2.5">
+          </label>
+          <label>
+            When do you stop screens?
+            <input type="time" id="screenCutoff" placeholder="Optional">
+            <span class="hint">If blank, we assume screens end at bedtime.</span>
+          </label>
+          <button type="submit" class="ghost-button">Calculate</button>
+          <p class="error" id="calcError" role="alert"></p>
+        </form>
+        <div class="calc-result">
+          <div class="rating-line">
+            <span class="rating-pill" id="sleepRating">--</span>
+            <span class="rating-copy" id="sleepHoursCopy">Add times to see your sleep window.</span>
+          </div>
+          <p class="result-summary" id="sleepSummary">We’ll total your sleep hours and check how close screens are to bedtime.</p>
+          <div class="result-advice" id="sleepAdvice">Advice shows up here based on your pattern.</div>
+          <div class="viz">
+            <div class="viz-row">
+              <div class="viz-label">Sleep vs. ideal (8-10h)</div>
+              <div class="viz-bar"><span id="sleepBar"></span></div>
+              <div class="viz-meta" id="sleepHoursMeta">--h</div>
+            </div>
+            <div class="viz-row">
+              <div class="viz-label">Screen overlap near bedtime</div>
+              <div class="viz-bar"><span id="screenBar"></span></div>
+              <div class="viz-meta" id="screenMeta">--</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="calc-footnote">No data is stored. It runs in your browser and follows basic sleep and light science.</div>
+    </section>
+
+    <section class="section advice" id="advice-library">
+      <div class="section-head">
+        <p class="eyebrow">Common patterns</p>
+        <h2>Advice bank for typical student sleep.</h2>
+        <p class="section-lede">The calculator pulls from these so the tips feel personal, not generic.</p>
+      </div>
+      <div class="advice-grid">
+        <article class="advice-card">
+          <h3>Very short sleep + high screens (~6h sleep, 3h screens)</h3>
+          <p>"Looks like you’re around 6 hours and ~3 hours of screens. That’s short and screen-heavy. Blue light pushes melatonin back, so cap screens to 1 hour before bed (night mode helps) and add ~30 minutes of sleep a night. Small gains add up fast."</p>
+        </article>
+        <article class="advice-card">
+          <h3>Adequate sleep + low screens (~8-9h sleep, ~1h screens)</h3>
+          <p>"Nice work! You’re getting ~8–9 hours with about an hour of screens. Keep that last hour dim or on night mode. Swap the phone for a book or music a few nights and see if you feel even fresher."</p>
+        </article>
+        <article class="advice-card">
+          <h3>Moderate sleep + some issues (~7h sleep, 2h screens or irregular)</h3>
+          <p>"You’re around 7 hours. Not bad, but shy of 8–10 hours. And ~2 hours of screens can keep your brain wired. Set steadier bed/wake times, cut screens in the last hour, and swap some scrolling for a warm shower or reading. That extra hour will help."</p>
+        </article>
+        <article class="advice-card">
+          <h3>Highly irregular schedule (4h one night, 9h the next)</h3>
+          <p>"Your sleep swings a lot—4 hours one night, 9 the next. That confuses your body clock. Aim for a target bed and wake time within ~30 minutes. Protect those hours like an appointment; you’ll feel steadier and less wiped out."</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section audio" id="audio">
+      <div class="section-head">
+        <p class="eyebrow">Ambient support</p>
+        <h2>ASMR audio to calm your space.</h2>
+        <p class="section-lede">Auto-plays on load; if blocked, it starts on your first tap. Toggle anytime.</p>
+      </div>
+      <div class="audio-controls">
+        <button class="toggle-button" id="audioToggle" aria-pressed="true">
+          <span class="toggle-label">Sound on</span>
+          <span class="toggle-pill"><span class="toggle-thumb"></span></span>
+        </button>
+        <div class="wave" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+        <span id="audioStatus" class="audio-status">Playing</span>
+      </div>
+      <audio id="asmrAudio" preload="auto" autoplay playsinline muted>
+        <source src="sleep.m4a" type="audio/mp4">
+        Your browser does not support the audio element.
+      </audio>
+      <audio id="asmrAudio2" preload="auto" autoplay playsinline muted>
+        <source src="music/bjm.m4a" type="audio/mp4">
+        Your browser does not support the audio element.
+      </audio>
+      <p class="section-lede small-note">Sound is a self-made snoring loop my classmate recorded for me.</p>
+    </section>
+
+    <section class="section video" id="video">
+      <div class="section-head">
+        <p class="eyebrow">Video</p>
+        <h2>How to fix insomnia: sleep-friendly light and calm vibe.</h2>
+        <p class="section-lede">Local clip about common sleep myths and, if nothing else works, using CBT-I (cognitive behavioral therapy for insomnia) as the steady, science-backed fix.</p>
+      </div>
+      <div class="video-frame">
+        <video src="sleep.mp4" controls playsinline preload="metadata" aria-label="Insomnia myths and CBT-I video"></video>
+      </div>
+    </section>
+
+    <section class="section science" id="science">
+      <div class="section-head">
+        <p class="eyebrow">Science snapshots</p>
+        <h2>What trusted sources say.</h2>
+        <p class="section-lede">CDC, Harvard Health, Mayo Clinic, NSF, and Cleveland Clinic inform these habits.</p>
+      </div>
+      <div class="science-grid">
+        <div class="science-card reveal"><span class="source">CDC</span><p>Insufficient sleep links to lower focus and higher illness risk.</p></div>
+        <div class="science-card reveal"><span class="source">Harvard Health</span><p>Blue light at night suppresses melatonin and shifts circadian timing.</p></div>
+        <div class="science-card reveal"><span class="source">Mayo Clinic</span><p>Routine bed/wake times and screen limits make sleep more reliable.</p></div>
+        <div class="science-card reveal"><span class="source">National Sleep Foundation</span><p>Morning daylight and dimmer evening light reinforce a healthy rhythm.</p></div>
+        <div class="science-card reveal"><span class="source">Cleveland Clinic</span><p>Sleep hygiene includes cool, dark rooms and calming pre-bed rituals.</p></div>
+      </div>
+    </section>
+
+    <section class="section coach" id="coach">
+      <div class="section-head">
+        <p class="eyebrow">GPT Sleep Consultant</p>
+        <h2>Copy this prompt into your chatbot.</h2>
+        <p class="section-lede">Tone: warm, non-judgy, science-backed. Covers sleep habits, circadian rhythm, melatonin, morning grogginess, and night routines.</p>
+      </div>
+      <div class="prompt-box">
+        <p id="promptText">Hello! I'm your personal AI Sleep Consultant, here to help you build healthier sleep habits. I'm trained in sleep science and friendly conversation, so you can ask me anything about your sleep routine or issues. I'll give you personalized tips grounded in scientific concepts like sleep hygiene, circadian rhythms, and melatonin - the hormone that makes you sleepy at night. Whether you're wondering how blue light from screens affects your sleep or need a calming nighttime routine, I'm here to guide you. Think of me as a virtual sleep coach. I can remind you why consistent bedtimes matter, how late-night screen time suppresses melatonin (tricking your brain into thinking it's daytime), and suggest small changes - like a warm decaf drink or dimming lights - to help you wind down. I'll ask a few questions about your schedule and habits, then tailor advice to you. Want to know how to feel less groggy in the morning, or how to stop tossing and turning at 2 AM? Just ask! I'll use proven methods (from relaxation techniques to managing naps) to craft a plan. Even though I'm not a human doctor, I come loaded with up-to-date knowledge from sources like the CDC, sleep foundations, and medical experts. I stay polite, non-judgmental, and totally confidential. I might occasionally share a fun fact or study - for example, how using a phone at 11 PM can push your biological clock later by hours. My goal is to listen to your concerns and then offer practical steps. Together, we can experiment with adjustments until you wake up feeling refreshed. Think of me as part science geek, part big sibling - always here to help you sleep better!</p>
+        <div class="prompt-actions">
+          <button class="ghost-button" id="copyPrompt">Copy prompt</button>
+          <span class="copy-status" id="copyStatus" aria-live="polite"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tips" id="quick-tips">
+      <div class="section-head">
+        <p class="eyebrow">Quick tips</p>
+        <h2>Sleep sooner, wake sharper.</h2>
+        <p class="section-lede">Fast, science-backed moves you can use tonight or tomorrow morning.</p>
+      </div>
+      <div class="tips-grid">
+        <div class="tip-column">
+          <h3>Fall asleep faster</h3>
+          <ul>
+            <li><strong>Cut screens 30-60 minutes before bed:</strong> Blue light suppresses melatonin and can delay it by hours; use night mode if you must scroll.</li>
+            <li><strong>Make the room dark, cool, quiet:</strong> Darkness cues melatonin; about 18C and white noise can speed sleep onset.</li>
+            <li><strong>Try 4-7-8 breathing:</strong> Calms the nervous system; inhale 4s, hold 7s, exhale 8s for a few rounds.</li>
+            <li><strong>Repeat a calm pre-bed routine:</strong> Dim lights, stretch, read, or journal to train your brain it's wind-down time.</li>
+            <li><strong>Avoid late caffeine, heavy meals, intense workouts:</strong> Stimulants and heat spike can delay sleep; keep nights light.</li>
+            <li><strong>If awake more than 20 minutes, get up briefly:</strong> Do a quiet, dim-light activity until sleepy to avoid bed-insomnia association.</li>
+          </ul>
+        </div>
+        <div class="tip-column">
+          <h3>Wake up refreshed</h3>
+          <ul>
+            <li><strong>Get bright light ASAP:</strong> Sunlight shuts off melatonin and boosts alertness; use a dawn lamp if it is dark out.</li>
+            <li><strong>Skip the snooze:</strong> Set one alarm, place it away from bed, and move your body to cut sleep inertia.</li>
+            <li><strong>Cold water cue:</strong> A splash or a 30-second cool shower boosts adrenaline and clears grogginess.</li>
+            <li><strong>Eat a simple breakfast:</strong> Protein plus complex carbs stabilize energy and mood after an overnight fast.</li>
+            <li><strong>Keep a steady schedule:</strong> Weekday/weekend consistency within about 60 minutes reduces social jet lag.</li>
+            <li><strong>Engage your brain early:</strong> Light reading or a puzzle can kickstart alertness and fight classroom drowsiness.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section melatonin" id="melatonin">
+      <div class="section-head">
+        <p class="eyebrow">Melatonin gummies</p>
+        <h2>Use carefully; less is usually enough.</h2>
+        <p class="section-lede">Melatonin nudges your body clock; it’s not a knockout pill. Pair it with good habits.</p>
+      </div>
+      <div class="melatonin-grid">
+        <div class="mel-card">
+          <h3>Dose matters</h3>
+          <p>Start low (0.5-1 mg), typical effective 1-3 mg about 30-60 minutes before bed. Megadoses can cause grogginess and may shift your rhythm the wrong way.</p>
+        </div>
+        <div class="mel-card">
+          <h3>Timing is everything</h3>
+          <p>Take it before target bedtime, not at 3 AM. Once taken, avoid bright screens or stimulating tasks that override the signal.</p>
+        </div>
+        <div class="mel-card">
+          <h3>Choose quality</h3>
+          <p>Look for third-party testing (USP/NSF). Some gummies mislabel doses or mix in unexpected ingredients; avoid proprietary blends.</p>
+        </div>
+        <div class="mel-card">
+          <h3>Avoid common mistakes</h3>
+          <p>Do not rely on melatonin while ignoring basics (late caffeine, bright lights). Use short-term to shift schedule, then reassess.</p>
+        </div>
+        <div class="mel-card">
+          <h3>Know when to skip</h3>
+          <p>If you have medical conditions or take other meds, ask a clinician. Teens often make enough melatonin naturally; try lifestyle fixes first.</p>
+        </div>
+      </div>
+      <p class="section-lede">Melatonin is a nudge to your internal clock. The heavy lifting comes from consistent schedules, dim nights, and bright mornings.</p>
+    </section>
+
+    <section class="section figures" id="famous-figures">
+      <div class="section-head">
+        <p class="eyebrow">Famous figures</p>
+        <h2>Even billionaires need sleep.</h2>
+        <p class="section-lede">Reality check: they differ, but most people still need ~8 hours.</p>
+      </div>
+      <div class="figures-grid">
+        <article class="figure-card">
+          <h3>Bill Gates</h3>
+          <p>Used to pull all-nighters; now aims for 7-8 hours to stay sharp and creative, calling it crucial for performance.</p>
+          <span class="figure-source">businessinsider.com · sleepandattentiondisorders.com</span>
+        </article>
+        <article class="figure-card">
+          <h3>Wang Jianlin</h3>
+          <p>Reportedly sleeps about 4 hours, up at 4:00 AM daily to exercise and work. Extreme schedule not recommended for most people.</p>
+          <span class="figure-source">news.futunn.com · worldcrunch.com</span>
+        </article>
+        <article class="figure-card">
+          <h3>Lei Jun</h3>
+          <p>Known as a model worker; often leaves office at 1-2 AM and starts by 8:30 AM, sometimes sleeping as little as 3 hours on trips. Advises young founders not to neglect sleep.</p>
+          <span class="figure-source">sohu.com · huanqiu.com</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section works" id="works-cited">
+      <div class="section-head">
+        <p class="eyebrow">References (MLA)</p>
+        <h2>Sources behind the advice.</h2>
+      </div>
+      <ol class="works-list">
+        <li>“ASMR Explained: Triggers and Types.” <em>Cleveland Clinic Health Essentials</em>, 8 Dec. 2025. <span class="url">health.clevelandclinic.org/what-is-asmr</span>.</li>
+        <li>Bhaimiya, Sawdah. “Bill Gates Used to Think That Sleep Is Lazy, and Competed with Colleagues to Get as Little Rest as Possible.” <em>Business Insider</em>, 7 Aug. 2023. <span class="url">businessinsider.com/bill-gates-microsoft-used-to-think-sleep-was-lazy-unnecessary-2023-8</span>.</li>
+        <li>“Big Guys Love to Wake Up Early: Wong Kin-lin Runs in the Morning at 6 O’Clock, Li Ka-shing Wakes Up at 5:59, Ma Yun Is an Exception.” <em>Futunn News (Boxun Finance)</em>, 16 Dec. 2019. <span class="url">news.futunn.com/en/post/4625917</span>.</li>
+        <li>Brock, Sharon. “5 Simple Changes to Your Bedroom for Better Sleep.” <em>Stanford Lifestyle Medicine</em>, 21 Oct. 2025. <span class="url">lifestylemedicine.stanford.edu/bedroom-changes-sleep-routine</span>.</li>
+        <li>Centers for Disease Control and Prevention. <em>Sleep and Your Health.</em> CDC, 10 May 2022. <span class="url">cdc.gov/heart-disease/about/sleep-and-heart-health.html</span>.</li>
+        <li>Erickson, Mandy. “Setting Your Biological Clock, Reducing Stress While Sheltering in Place.” <em>Stanford Medicine News Center</em>, 3 June 2020. <span class="url">med.stanford.edu/news/insights/2020/06/setting-your-biological-clock-reducing-stress-while-sheltering-in-place.html</span>.</li>
+        <li>Harvard Health Publishing. “Blue Light Has a Dark Side.” <em>Harvard Health</em>, 24 July 2024. <span class="url">health.harvard.edu/staying-healthy/blue-light-has-a-dark-side</span>.</li>
+        <li>Ian. “What Is Xiaomi CEO Lei Jun’s Daily Routine?” <em>Pressfarm</em>, 4 Oct. 2025. <span class="url">press.farm/what-is-xiaomi-ceo-lei-juns-daily-routine</span>.</li>
+        <li>“Irregular Sleep Schedules Can Lead to Bigger Health Issues.” <em>NIH MedlinePlus Magazine</em>, 20 Aug. 2019. <span class="url">magazine.medlineplus.gov/article/irregular-sleep-schedules-can-lead-to-bigger-health-issues</span>.</li>
+        <li>Mayo Clinic Staff. “Sleep Tips: 6 Steps to Better Sleep.” <em>Mayo Clinic</em>, 6 Sept. 2022. <span class="url">mayoclinic.org/healthy-lifestyle/adult-health/in-depth/sleep/art-20048379</span>.</li>
+        <li>National Sleep Foundation. “Good Light, Bad Light, and Better Sleep.” <em>National Sleep Foundation</em>, 2023. <span class="url">thensf.org/good-light-bad-light-and-better-sleep</span>.</li>
+        <li>“Sleep by the Numbers.” <em>National Sleep Foundation</em>, 12 May 2021. <span class="url">thensf.org/sleep-facts-and-statistics</span>.</li>
+        <li>Otman, Haley. “For Insomnia, Consider Cognitive Behavioral Therapy Before Medication.” <em>Michigan Medicine – Health Lab</em>, 11 July 2016. <span class="url">healthlab.umich.edu/insomnia-consider-cognitive-behavioral-therapy-medication</span>.</li>
+        <li>“Snooze Smarter: How a Sleep Diary Can Improve Your Sleep Habits.” <em>Hackensack Meridian Health</em>, 20 Oct. 2023. <span class="url">hackensackmeridianhealth.org/en/healthu/2023/10/20/snooze-smarter-how-a-sleep-diary-can-improve-your-sleep-habits</span>.</li>
+        <li>Summer, Jay Vera. “Melatonin Dosage: How Much Melatonin to Take.” <em>Sleep Foundation</em>, 15 July 2025. <span class="url">sleepfoundation.org/melatonin/melatonin-dosage-how-much-should-you-take</span>.</li>
+        <li>Trauer, Johannes M., et al. “Cognitive Behavioral Therapy for Chronic Insomnia: A Systematic Review and Meta-analysis.” <em>Annals of Internal Medicine</em>, vol. 163, no. 3, 2015, pp. 191–204. <span class="url">doi.org/10.7326/M14-2841</span>.</li>
+      </ol>
+    </section>
+
+    <section class="section artist" id="artist-statement">
+      <div class="section-head">
+        <p class="eyebrow">Artist Statement</p>
+        <h2>Creative process & rhetoric</h2>
+      </div>
+      <div class="placeholder-box">
+        <p>This project grew out of my own messed-up sleep during the holidays. After Thanksgiving and Christmas, I stayed up late gaming, slept at random times, and basically lost track of any routine. One night I slept after playing for four days straight and didn’t wake up until 4 PM. Then I stayed up again until 2 AM. It totally ruined my circadian rhythm.</p>
+        <p>Since my roommate and I had opposite sleep schedules, I was still awake while he was already sleeping. I actually recorded his snoring and turned it into part of the sound design. I also added an ASMR track I personally use to fall asleep faster.</p>
+        <p>I designed the pixel-style icons myself because I love that aesthetic—clean, direct, and a bit playful. The flashing “SLEEP” characters and soft glowing tags are meant to act like visual cues or gentle nudges—they help set the mood, kind of like a psychological signal that says "time to sleep."</p>
+        <p>There’s also a sleep calculator I built: users enter their bedtime, wake-up time, and screen usage. Then the site automatically evaluates their sleep quality and gives tailored advice based on patterns—like short sleep, heavy screen time, or irregular hours. If nothing works, I included a GPT-based sleep consultant prompt so students can chat with AI and talk through their personal situations. And if it’s still really bad, the site gently introduces CBT-I (Cognitive Behavioral Therapy for Insomnia) as the most science-based treatment option.</p>
+        <p>All of this connects to my combined major in Computer Science and Cognitive Psychology. I'm really interested in how tech can support mental health and behavior, so this project was a way to bring that together—mixing code, visuals, psychology, and sound into one interactive space.</p>
+        <p>I kept the language short and casual on purpose—no lectures, no guilt—just real tools students can actually use. That includes the GPT prompt, the icons, the animation that turns the page from day to night, and even the background that subtly shifts colors like an aurora. The whole vibe is meant to feel calm, cozy, and quietly smart.</p>
+      </div>
+    </section>
+
+    <section class="section closing" id="cta">
+      <div class="section-head">
+        <p class="eyebrow">Tonight</p>
+        <h2>Try one habit tonight and notice how you feel tomorrow.</h2>
+        <p class="section-lede">Start with the smallest move you can repeat: dim screens, step into morning light, or cool the room by 1-2 degrees.</p>
+      </div>
+      <div class="hero-actions">
+        <a href="#habits" class="ghost-button">Pick a habit</a>
+        <a href="#audio" class="text-link">Play the ASMR ambience</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+  <script src="gsap.min.js"></script>
+  <script src="ScrollTrigger.min.js"></script>
+</body>
+</html>
